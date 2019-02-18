@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Spreadsheet test</title>
-		<style>
-            img{
-                width: 20%;
-            }
-		</style>
-	</head>
-	<body>
-            <h1>Movies we like</h1>
-            <main id="app"></main>
-            <template id="tarantino">
-                <article class="tarancl">
-                    <h2 id="title"></h2>
-                    <h2 id="year"></h2>
-                    <h2 id="prodcom"></h2>
-                    <h2 id="leadroles"></h2>
-                    <img src="img" alt="poster" id="poster">
-                </article>
-            </template>
-		<script>
-            const main=document.querySelector("main");
-            const template=document.querySelector("#tarantino").content;
-            const link = "https://spreadsheets.google.com/feeds/list/1Zai3AoYR3yQ7zoGiXeiOVQnmLlf3vQjiQ_ELSgVlJkg/od6/public/values?alt=json";
 
-            function loadJSON(link) {
-                fetch(link).then(e=>e.json()).then(data=>data.feed.entry.forEach(displayTarData));
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spreadsheet test</title>
+    <style>
+        img {
+            width: 20%;
+        }
 
-            function displayTarData(data){
-                console.log(data);
-                const clone=template.cloneNode("true");
-                clone.querySelector("#title").textContent=data.gsx$title.$t;
-                clone.querySelector("#year").textContent=data.gsx$releaseyear.$t;
-                clone.querySelector("#prodcom").textContent=data.gsx$productioncompanies.$t;
-                clone.querySelector("#leadroles").textContent=data.gsx$leadroles.$t;
-                clone.querySelector("#poster").src=data.gsx$movieposter.$t;
+    </style>
+</head>
 
-                main.appendChild(clone);
-            }
+<body>
+    <h1>Movies we like</h1>
+    <main id="app"></main>
+    <template id="tarantino">
+        <article class="tarancl">
+            <h2 id="title"></h2>
+            <h2 id="year"></h2>
+            <h2 id="prodcom"></h2>
+            <h2 id="leadroles"></h2>
+            <img src="img" alt="poster" id="poster">
+        </article>
+    </template>
+    <script>
+        const main = document.querySelector("main");
+        const template = document.querySelector("#tarantino").content;
+        const link = "https://spreadsheets.google.com/feeds/list/1Zai3AoYR3yQ7zoGiXeiOVQnmLlf3vQjiQ_ELSgVlJkg/od6/public/values?alt=json";
 
-            loadJSON(link);
-		</script>
-	</body>
+        function loadJSON(link) {
+            fetch(link).then(e => e.json()).then(data => data.feed.entry.forEach(displayTarData));
+        }
+
+        function displayTarData(data) {
+            console.log(data);
+            const clone = template.cloneNode("true");
+            clone.querySelector("#title").textContent = data.gsx$title.$t;
+            clone.querySelector("#year").textContent = data.gsx$releaseyear.$t;
+            clone.querySelector("#prodcom").textContent = data.gsx$productioncompanies.$t;
+            clone.querySelector("#leadroles").textContent = data.gsx$leadroles.$t;
+            clone.querySelector("#poster").src = data.gsx$movieposter.$t;
+
+            main.appendChild(clone);
+        }
+
+        loadJSON(link);
+
+    </script>
+</body>
 
 </html>
