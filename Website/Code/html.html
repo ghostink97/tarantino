@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Cinema Tarantino">
+        <link rel="stylesheet" href="css/css.css" type="text/css">
+        <title>Cinema Tarantino</title>
+        <link rel="icon" href="BLANK" type="image/x-icon">
+    </head>
+        <body>
+                <header>
+                    <h1>Cinema Tarantino</h1>
+                    <a href="#main"><img src="images/down-arrow-med.png" alt="arrowbtndown"></a>
+                    <!--there is a large one in the images folder, feel free to switch it to that one, if it's better-->
+                </header>
+                <main id="main">
+                    <h2>Cinema Tarantino</h2>
+                    <div id="sortNav">
+                        <h3 id="sortby">Sort by</h3>
+                        <img src="images/right-arrow-med.png" alt="arrowbtnright">
+                    </div>
+                    <div id="sortby-categories">
+                        <ul>
+                            <li>
+                                <a href="#">ABC</a>
+                            </li>
+                            <li>
+                                <a href="#">Genre</a>
+                            </li>
+                            <li>
+                                <a href="#">IMDB Score</a>
+                            </li>
+                            <li>
+                                <a href="#">Release Year</a> <!--Release year as the final option because it is the default-->
+                            </li>                          
+                        </ul>
+                    </div>
+                    <section id="posters"></section>
+                    <section id="tarantino">
+                        <h2>About Quentin Tarantino</h2>
+                        <img src="#" alt="image of tarantino">
+                        <p>something something his life</p>
+                    </section>
+                </main>
+                <template id="posters">
+                        <article class="tarancl">
+                            <img src="img" alt="poster" id="poster">
+                        </article>
+                </template>
+                    <article id="hoverinfo">
+                        <h3 id="imdb"></h3>
+                        <h2 id="title"></h2>
+                        <h3 id="age-rating"></h3>
+                        <h3 id="year"></h3>
+                        <h3 id="genres"></h3>
+                        <p id="short description"></p>
+                        <button>Read More</button>
+                    </article>
+                    <article id="modal">
+                            <img src="img" alt="poster" id="poster">
+                            <h2 id="imdb"></h2>
+                            <h2 id="title"></h2>
+                            <h3 id="age-rating"></h3>
+                            <h3 id="length"></h3>
+                            <h2 id="year"></h2>
+                            <h3 id="genres"></h3>
+                            <h3 id="prodcom"></h3>
+                            <h3 id="leadroles"></h3>
+                            <p id="long description"></p>
+                    </article>
+                    <aside>
+                <!--I just added this bar in case we want photos in the sidebar, Like in pola's design.
+                    Feel free to delete if it is not needed :)-->
+                </aside>
+                <footer>
+                    <!--I just added this footer in case we want one later.
+                        Feel free to delete if it is not needed :)-->
+                </footer>
+            </div>
+        <script src="/js/js.js"></script>
+    </body>
+</html>
