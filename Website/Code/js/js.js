@@ -13,23 +13,20 @@ function displayTarData(data){
     console.log(data);
     const clone=template.cloneNode("true");
 
-    clone.querySelector("#poster").src=data.gsx$movieposter.$t;
-    document.querySelector("#posters").addEventListener("click", hoverInfoShow);
+    clone.querySelector(".poster").src=data.gsx$movieposter.$t;
 
-    document.querySelector("#hoverinfo").addEventListener("click", ()=>{
+    document.querySelector("#posters").addEventListener("click", ()=>{
         fetch(link+data.id).then(e=>e.json()).then(data=>hoverInfoShow(data));
             });
 
-    function hoverInfoShow(film){
+    function hoverInfoShow(data){
         hoverinfo.classList.remove("inactive");
-        hoverinfo.querySelector("#imdb").textContent=film.gsx$imdb.$t;
-        hoverinfo.querySelector("#title").textContent=film.gsx$title.$t;
-        hoverinfo.querySelector("#age-rating").textContent=film.gsx$ageRating.$t;
-        hoverinfo.querySelector("#year").textContent=film.gsx$releaseYear.$t;
-        hoverinfo.querySelector("#genres").textContent=film.gsx$genres.$t;
-        hoverinfo.querySelector("#short description").textContent=film.gsx$leadroles.$t;
-    
-        
+        hoverinfo.querySelector(".imdb").textContent=data.gsx$imdb.$t;
+        hoverinfo.querySelector(".title").textContent=data.gsx$title.$t;
+        hoverinfo.querySelector(".age-rating").textContent=data.gsx$ageRating.$t;
+        hoverinfo.querySelector(".year").textContent=data.gsx$releaseYear.$t;
+        hoverinfo.querySelector(".genres").textContent=data.gsx$genres.$t;
+        hoverinfo.querySelector(".shortDescription").textContent=data.gsx$leadroles.$t;
     }
 
     main.appendChild(clone);
