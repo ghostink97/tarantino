@@ -6,7 +6,7 @@
         <meta name="description" content="Cinema Tarantino">
         <link rel="stylesheet" href="css/css.css" type="text/css">
         <title>Cinema Tarantino</title>
-        <link rel="icon" href="BLANK" type="image/x-icon">
+        <link rel="icon" href="film.ico" type="image/x-icon">
     </head>
         <body>
                 <header>
@@ -39,16 +39,16 @@
                     <section id="posters"></section>
                     <section id="tarantino">
                         <h2>About Quentin Tarantino</h2>
-                        <img src="#" alt="image of tarantino">
+                        <img src="#" alt="image of tarantino" class="posterimg">
                         <p>something something his life</p>
                     </section>
                 </main>
-                <template id="posters">
+                <template id="poster-template">
                         <article class="tarancl">
                             <img src="img" alt="poster" id="poster">
                         </article>
                 </template>
-                    <article id="hoverinfo">
+                    <article id="hoverinfo" class="inactive">
                         <h3 id="imdb"></h3>
                         <h2 id="title"></h2>
                         <h3 id="age-rating"></h3>
@@ -57,17 +57,18 @@
                         <p id="short description"></p>
                         <button>Read More</button>
                     </article>
-                    <article id="modal">
+                    <article id="modal" class="inactive">
+                            <button>X</button>
                             <img src="img" alt="poster" id="poster">
-                            <h2 id="imdb"></h2>
                             <h2 id="title"></h2>
                             <h3 id="age-rating"></h3>
                             <h3 id="length"></h3>
-                            <h2 id="year"></h2>
-                            <h3 id="genres"></h3>
                             <h3 id="prodcom"></h3>
+                            <h3 id="genres"></h3>
                             <h3 id="leadroles"></h3>
+                            <h2 id="year"></h2>
                             <p id="long description"></p>
+                            <a href="#">Watch the trailer</a>
                     </article>
                     <aside>
                 <!--I just added this bar in case we want photos in the sidebar, Like in pola's design.
@@ -78,6 +79,6 @@
                         Feel free to delete if it is not needed :)-->
                 </footer>
             </div>
-        <script src="/js/js.js"></script>
+        <script src="js/js.js"></script>
     </body>
 </html>
