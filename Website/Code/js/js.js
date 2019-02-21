@@ -23,28 +23,6 @@ function displayTarData(data){
     clone.querySelector(".genres").textContent=data.gsx$genres.$t;
     clone.querySelector(".shortDescription").textContent=data.gsx$leadroles.$t;
 
-    clone.querySelector(".poster").addEventListener("click", ()=>{
-        hoverInfoShow(data);
-            });
-
-    function hoverInfoShow(data){
-        hoverinfo.classList.remove("inactive");
-        hoverinfo.querySelector(".imdb").textContent=data.gsx$imdb.$t;
-        hoverinfo.querySelector(".title").textContent=data.gsx$title.$t;
-        hoverinfo.querySelector(".age-rating").textContent=data.gsx$agerating.$t;
-        hoverinfo.querySelector(".year").textContent=data.gsx$releaseyear.$t;
-        hoverinfo.querySelector(".genres").textContent=data.gsx$genres.$t;
-        hoverinfo.querySelector(".shortDescription").textContent=data.gsx$leadroles.$t;
-    
-
-    //clone.querySelector(".poster").addEventListener("mouseout", ()=>{
-    //    hoverInfoHide(data);
-    //        });
-
-    //    function hoverInfoHide(){
-    //        hoverinfo.classList.add("inactive");
-    //        }
-    
         hoverinfo.querySelector("#readmore").addEventListener("click", ()=>{
         modalInfoShow(data);
             });
