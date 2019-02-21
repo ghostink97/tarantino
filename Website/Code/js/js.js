@@ -14,7 +14,7 @@ function displayTarData(data){
     const clone=template.cloneNode("true");
 
     clone.querySelector(".poster").src=data.gsx$movieposter.$t;
-
+clone.querySelector(".year").textContent=data.gsx$releaseyear.$t;
     document.querySelector("#posters").addEventListener("click", ()=>{
         fetch(link+data.id).then(e=>e.json()).then(data=>hoverInfoShow(data));
             });
