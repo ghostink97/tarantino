@@ -40,6 +40,7 @@ function displayTarData(data){
         modal.querySelector(".leadroles").textContent=data.gsx$leadroles.$t;
         modal.querySelector(".year").textContent=data.gsx$releaseyear.$t;
         modal.querySelector(".longdescription").textContent=data.gsx$stotyline.$t;
+        modal.querySelector(".trailerlink").href=data.trailerlink.$t;
 
         modal.querySelector("#exitmodal").addEventListener("click", ()=>{
     modalInfoHide(data);

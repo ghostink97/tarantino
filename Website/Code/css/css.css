@@ -139,21 +139,6 @@ li {
 }
 
 
-/*888888888888 POSTERS 888888888888*/
-
-#posters {
-    border-top: 1px solid #FAAE00;
-    border-bottom: 1px solid #FAAE00;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 1rem;
-}
-
-.poster {
-    width: 100%;
-    height: 100%;
-}
-
 
 
 
@@ -190,6 +175,21 @@ li {
 }
 
 
+/*888888888888 POSTERS 888888888888*/
+
+#posters {
+    border-top: 1px solid #FAAE00;
+    border-bottom: 1px solid #FAAE00;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 1rem;
+}
+
+.poster {
+    width: 100%;
+    height: 100%;
+}
+
 
 
 /*888888888888 FLIPCARDS 888888888888*/
@@ -198,12 +198,14 @@ li {
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem;
+    height: 45rem;
     width: 30rem;
+    margin-bottom: 3rem;
+    border-radius: 5px;
 }
 
 .card__side {
-    height: 52rem;
+    height: 45rem;
     transition: all .8s ease;
     position: absolute;
     top: 0;
@@ -212,7 +214,7 @@ li {
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 7rem rgba(250, 174, 0, 0.19);
 }
 
 .card__side--front {
