@@ -25,6 +25,7 @@ function displayTarData(data){
 
         hoverinfo.querySelector("#readmore").addEventListener("click", ()=>{
         modalInfoShow(data);
+
             });
     
 
