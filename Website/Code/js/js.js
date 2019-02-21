@@ -15,8 +15,15 @@ function displayTarData(data){
     const clone=template.cloneNode("true");
 
     clone.querySelector(".poster").src=data.gsx$movieposter.$t;
+    clone.querySelector(".year").textContent=data.gsx$releaseyear.$t;
+    clone.querySelector(".imdb").textContent=data.gsx$imdb.$t;
+    clone.querySelector(".title").textContent=data.gsx$title.$t;
+    clone.querySelector(".age-rating").textContent=data.gsx$ageRating.$t;
+    clone.querySelector(".year").textContent=data.gsx$releaseYear.$t;
+    clone.querySelector(".genres").textContent=data.gsx$genres.$t;
+    clone.querySelector(".shortDescription").textContent=data.gsx$leadroles.$t;
 
-    clone.querySelector(".poster").addEventListener("mouseenter", ()=>{
+    clone.querySelector(".poster").addEventListener("click", ()=>{
         hoverInfoShow(data);
             });
 
@@ -28,17 +35,41 @@ function displayTarData(data){
         hoverinfo.querySelector(".year").textContent=data.gsx$releaseyear.$t;
         hoverinfo.querySelector(".genres").textContent=data.gsx$genres.$t;
         hoverinfo.querySelector(".shortDescription").textContent=data.gsx$leadroles.$t;
+    
+
+    //clone.querySelector(".poster").addEventListener("mouseout", ()=>{
+    //    hoverInfoHide(data);
+    //        });
+
+    //    function hoverInfoHide(){
+    //        hoverinfo.classList.add("inactive");
+    //        }
+    
+        hoverinfo.querySelector("#readmore").addEventListener("click", ()=>{
+        modalInfoShow(data);
+            });
     }
 
-    clone.querySelector(".poster").addEventListener("mouseout", ()=>{
-        hoverInfoHide(data);
-            });
+    function modalInfoShow(data){
+        modal.classList.remove("inactive");
+        modal.querySelector(".poster").src=data.gsx$movieposter.$t;
+        modal.querySelector(".title").textContent=data.gsx$title.$t;
+        modal.querySelector(".age-rating").textContent=data.gsx$agerating.$t;
+        modal.querySelector(".length").textContent=data.gsx$length.$t;
+        modal.querySelector(".prodcom").textContent=data.gsx$productioncompanies.$t;
+        modal.querySelector(".genres").textContent=data.gsx$genres.$t;
+        modal.querySelector(".leadroles").textContent=data.gsx$leadroles.$t;
+        modal.querySelector(".year").textContent=data.gsx$releaseyear.$t;
+        modal.querySelector(".longdescription").textContent=data.gsx$stotyline.$t;
 
-        function hoverInfoHide(){
-            hoverinfo.classList.add("inactive");
-            }
-    
-    //just to make a pull request
+        modal.querySelector("#exitmodal").addEventListener("click", ()=>{
+    modalInfoHide(data);
+        });
+
+    function modalInfoHide(){
+        modal.classList.add("inactive");
+        }
+    }
 
         
     main.appendChild(clone);
