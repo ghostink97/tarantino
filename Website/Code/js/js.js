@@ -18,13 +18,13 @@ function displayTarData(data){
     clone.querySelector(".year").textContent=data.gsx$releaseyear.$t;
     clone.querySelector(".imdb").textContent=data.gsx$imdb.$t;
     clone.querySelector(".title").textContent=data.gsx$title.$t;
-    clone.querySelector(".age-rating").textContent=data.gsx$ageRating.$t;
-    clone.querySelector(".year").textContent=data.gsx$releaseYear.$t;
+    clone.querySelector(".age-rating").textContent=data.gsx$agerating.$t;
+    clone.querySelector(".year").textContent=data.gsx$releaseyear.$t;
     clone.querySelector(".genres").textContent=data.gsx$genres.$t;
     clone.querySelector(".shortDescription").textContent=data.gsx$leadroles.$t;
 
-        hoverinfo.querySelector("#readmore").addEventListener("click", ()=>{
-        modalInfoShow(data);
+    clone.querySelector("#readmore").addEventListener("click", ()=>{
+    modalInfoShow(data);
 
             });
     
