@@ -41,7 +41,15 @@
                 </ul>
             </div>
         </nav>
-        <section id="posters"></section>
+
+
+                <section id="posters">
+                </section>
+
+
+
+
+
         <section id="tarantino">
             <h2 class="heading-tertiary">About Quentin Tarantino</h2>
             <img src="images/tarantino.png" alt="image of tarantino" class="tarantinoimg">
@@ -56,11 +64,16 @@
         </section>
     </main>
     <template id="poster-template">
-        <article class="tarancl">
-            <img src="img" alt="poster" class="poster">
-        </article>
-    </template>
-    <article id="hoverinfo" class="inactive">
+       <div class="card">
+
+            <div class="card__side card__side--front">
+                <img src="img" alt="poster" class="poster">
+            </div>
+
+
+            <div class="card__side card__side--back card__side--back-1">
+
+<article id="hoverinfo" class="">
         <h3 class="imdb">imdb</h3>
         <h2 class="title">title</h2>
         <h3 class="age-rating">rating</h3>
@@ -69,6 +82,11 @@
         <p class="shortDescription">shortDescription</p>
         <button>Read More</button>
     </article>
+            </div>
+        </div>
+
+    </template>
+
     <article id="modal" class="inactive">
         <button>X</button>
         <img src="img" alt="poster" class="poster">

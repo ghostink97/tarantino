@@ -16,8 +16,10 @@ function displayTarData(data){
 
     clone.querySelector(".poster").src=data.gsx$movieposter.$t;
 
-    clone.querySelector(".poster").addEventListener("mouseenter", ()=>{
-        hoverInfoShow(data);
+clone.querySelector(".year").textContent=data.gsx$releaseyear.$t;
+    document.querySelector("#posters").addEventListener("click", ()=>{
+        fetch(link+data.id).then(e=>e.json()).then(data=>hoverInfoShow(data));
+
             });
 
     function hoverInfoShow(data){
