@@ -11,11 +11,14 @@
 </head>
 
 <body>
+
+
     <header id="header">
         <h1 class="heading-primary">Cinema Tarantino</h1>
         <div class="arrow"><a href="#main"><img src="images/down-arrow-med.png" alt="arrowbtndown" class="arrow__btn"></a></div>
-        <!--                    there is a large one in the images folder, feel free to switch it to that one, if it's better<img src="images/down-arrow-med.png" alt="arrowbtndown" class="arrow__btn">-->
     </header>
+
+
     <main id="main">
         <h2 class="heading-secondary">Cinema Tarantino</h2>
         <div id="sortNav">
@@ -23,6 +26,8 @@
             <img src="images/right-arrow-med.png" alt="arrowbtnright" class="arrowbtnright">
             <img src="images/left-arrow-med.png" alt="arrowbtnleft" class="arrowbtnleft inactive">
         </div>
+
+
         <nav>
             <div id="sortby-categories" class="inactive">
                 <ul>
@@ -42,8 +47,12 @@
                 </ul>
             </div>
         </nav>
+
+
         <section id="posters">
         </section>
+
+
         <section id="tarantino">
             <h2 class="heading-tertiary">About Quentin Tarantino</h2>
             <img src="images/tarantino.png" alt="image of tarantino" class="tarantinoimg">
@@ -57,29 +66,27 @@
             </p>
         </section>
     </main>
-    <template id="poster-template">
-       <div class="card">
 
+
+    <template id="poster-template">
+        <div class="card">
             <div class="card__side card__side--front">
                 <img src="img" alt="poster" class="poster">
             </div>
-
-
             <div class="card__side card__side--back card__side--back-1">
-
-<article id="hoverinfo" class="">
-        <h3 class="imdb">imdb</h3>
-        <h2 class="title">title</h2>
-        <h3 class="age-rating">rating</h3>
-        <h3 class="year">year</h3>
-        <h3 class="genres">genres</h3>
-        <p class="shortDescription">shortDescription</p>
-        <button id="readmore">Read More</button>
-    </article>
+                <article id="hoverinfo" class="">
+                    <h3 class="imdb">imdb</h3>
+                    <h2 class="title">title</h2>
+                    <h3 class="age-rating">rating</h3>
+                    <h3 class="year">year</h3>
+                    <h3 class="genres">genres</h3>
+                    <p class="shortDescription">shortDescription</p>
+                    <button id="readmore">Read More</button>
+                </article>
             </div>
         </div>
-
     </template>
+
 
     <article id="modal" class="inactive">
         <button id="exitmodal">X</button>
@@ -92,7 +99,9 @@
         <h3 class="leadroles">lead</h3>
         <h2 class="year">year</h2>
         <p class="longdescription">desc</p>
+
         <a href="#" class="trailer">Watch the trailer</a>
+
     </article>
     <aside>
         <!--I just added this bar in case we want photos in the sidebar, Like in pola's design.
@@ -105,4 +114,5 @@
     <script src="js/js.js"></script>
 </body>
 <!--just to add a pull request-->
+
 </html>
