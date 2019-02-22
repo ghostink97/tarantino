@@ -3,7 +3,9 @@ const template=document.querySelector("#poster-template").content;
 const link = "https://spreadsheets.google.com/feeds/list/1Zai3AoYR3yQ7zoGiXeiOVQnmLlf3vQjiQ_ELSgVlJkg/od6/public/values?alt=json";
 const modal =document.querySelector("#modal");
 const hoverinfo =document.querySelector("#hoverinfo");
-
+const btnright =document.querySelector(".arrowbtnright");
+const btnleft =document.querySelector(".arrowbtnleft");
+const sortbycat=document.querySelector("#sortby-categories");
 
 
 function loadJSON(link) {
@@ -40,6 +42,7 @@ function displayTarData(data){
         modal.querySelector(".leadroles").textContent=data.gsx$leadroles.$t;
         modal.querySelector(".year").textContent=data.gsx$releaseyear.$t;
         modal.querySelector(".longdescription").textContent=data.gsx$stotyline.$t;
+        modal.querySelector(".trailer").href=data.gsx$trailerlink.$t;
 
         modal.querySelector("#exitmodal").addEventListener("click", ()=>{
     modalInfoHide(data);
@@ -53,6 +56,28 @@ function displayTarData(data){
         
     main.appendChild(clone);
 }
+
+//this js works, but css screws it over - sort by stuff
+
+btnright.addEventListener("click", showcat);
+
+function showcat(){
+    btnright.classList.add("inactive");
+    sortbycat.classList.remove("inactive");
+    btnleft.classList.remove("inactive");
+}
+
+btnleft.addEventListener("click", dontsortbycat);
+
+function dontsortbycat(){
+    btnright.classList.remove("inactive");
+    sortbycat.classList.add("inactive");
+    btnleft.classList.add("inactive");
+}
+//
+
+
+
 
 loadJSON(link);
 
