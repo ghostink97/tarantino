@@ -154,6 +154,11 @@ nav {
     cursor: pointer;
 }
 
+.arrowbtnleft {
+    transform: rotate(-130deg);
+    cursor: pointer;
+}
+
 
 #sortby-categories {
     text-align: center;
@@ -179,7 +184,7 @@ nav {
     transition: scale .3s ease-in;
 }
 
-#sortby-categories ul li a:hover{
+#sortby-categories ul li a:hover {
     border-bottom: 1px solid #FAAE00;
 }
 
@@ -194,6 +199,8 @@ nav {
 
 .columns {
     column-count: 2;
+    column-gap: 1.5rem;
+    column-rule: 1px solid rgba(178, 178, 178, 0.2);
 }
 
 .heading-tertiary {
@@ -207,7 +214,7 @@ nav {
     font-size: 3rem;
     padding-top: 5rem;
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 }
 
 .tarantinoimg {
@@ -222,13 +229,14 @@ nav {
     text-align: left;
     margin-bottom: 2rem;
     font-family: 'Didact Gothic', sans-serif;
+    hyphens: auto;
 }
 
 
 /*888888888888 POSTERS 888888888888*/
 
 #posters {
-/*
+    /*
     border-top: 1px solid #FAAE00;
     border-bottom: 1px solid #FAAE00;
 */
@@ -325,10 +333,12 @@ nav {
     height: 2rem;
     text-align: center;
 }
-.container>h3 {
 
-}
-.age-rating, .year, .genres {
+.container > h3 {}
+
+.age-rating,
+.year,
+.genres {
     display: inline-block;
     font-family: Courier;
     color: #848181;
@@ -361,19 +371,175 @@ nav {
     color: #FAAE00;
     background-color: #2B2A2A;
     padding: .5rem 1rem;
-    border: 1px solid #FAAE00;
+    border: 2px solid #BE0602;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
     transition: all .2s;
-    outline: .5rem solid #585555;
+    outline: .3rem solid #FAAE00;
+}
+
+.linkreadmore{
+    text-decoration: none;
+    font-family: Courier;
+    text-transform: uppercase;
+    color: #FAAE00;
 }
 
 #readmore:hover {
     transform: scale(1.2);
     outline-offset: .7rem;
 }
+
+
+
+
+/*888888888888 STYLING MODAL 888888888888*/
+
+.popup {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popup__content {
+    width: 90rem;;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    border-radius: 3px;
+    opacity: 0;
+    transition: all .5s .2s;
+}
+
+.modal-content__left {
+    width: 33.333333333%;
+    display: table-cell;
+    background-color: #000;
+}
+
+.modal-content__right {
+    width: 66.666666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1rem 1.5rem;
+}
+
+img.photo1 {
+    display: block;
+    width:100%;
+}
+img.photo2 {
+    display: block;
+    width: 100%;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.modal__close {
+    text-decoration: none;
+    font-size: 3rem;
+    color: #000;
+    transition: all .3s;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: inline-block;
+}
+
+.modal__close:hover {
+    color: #FAAE00;
+}
+
+
+/*888888888888 POPUP  888888888888*/
+
+.modal-content__right h2.title {
+    font-size: 4rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.modal-content__right h3.age-rating,
+.modal-content__right h3.genres,
+.modal-content__right h2.year,
+.length,
+.prodcom,
+.leadroles {
+    display: inline-block;
+    font-family: 'Didact Gothic', sans-serif;
+    color: #FAAE00;
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    border-left: 1px solid #FAAE00;
+    padding-left: .5rem;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.longdescription {
+    font-family: 'Didact Gothic', sans-serif;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    hyphens: auto;
+
+    padding: 2rem;
+
+    column-count: 2;
+    column-rule: 1px solid rgba(178, 178, 178, 0.4);
+}
+
+.trailer {
+    width: 20rem;
+    font-family: Courier;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #FAAE00;
+    background-color: #fff;
+    padding: .5rem 1rem;
+    border: 2px solid #BE0602;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    transition: all .2s;
+    outline: .3rem solid #FAAE00;
+}
+
+.trailer:hover {
+    transform: scale(1.2);
+    outline-offset: .7rem;
+}
+
+
+
 
 /*888888888888 JAVASCRIPT SHIT 888888888888*/
 
@@ -404,7 +570,7 @@ nav {
     }
 
     .columns {
-    column-count: 1;
+        column-count: 1;
     }
 }
 
@@ -419,7 +585,7 @@ nav {
 
 
     .columns {
-    column-count: 1;
+        column-count: 1;
     }
 
     .tarantinoimg {
@@ -432,7 +598,3 @@ nav {
         display: block;
     }
 }
-
-
-
-

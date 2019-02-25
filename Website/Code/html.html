@@ -33,13 +33,13 @@
                 <ul>
                     <li>
 
-                        <a class="link sorttitle" href="#">ABC</a>
+                        <a class="link sorttitle" href="#sortby">abc</a>
                     </li>
                     <li>
-                        <a class="link sortimdb" href="#">IMDB Score</a>
+                        <a class="link sortimdb" href="#sortby">imdb score</a>
                     </li>
                     <li>
-                        <a class="link sortyear" href="#">Release Year</a>
+                        <a class="link sortyear" href="#sortby">release year</a>
                         <!--Release year as the final option because it is the default-->
                     </li>
                 </ul>
@@ -85,29 +85,34 @@
                         <h3 class="genres">genres</h3>
                     </div>
                     <p class="shortDescription">shortDescription</p>
-                    <button id="readmore">Read More</button>
+                    <button id="readmore"><a href="#popup" class="linkreadmore">Read More</a></button>
                 </article>
             </div>
         </div>
     </template>
 
+    <div class="popup" id="popup">
+            <article id="modal" class="inactive popup__content">
+                <div class="modal-content__left">
+                    <img src="img" alt="photo1" class="photo1">
+                    <img src="img" alt="photo2" class="photo2">
+                </div>
+                <div class="modal-content__right">
+                    <a href="#sortby" class="modal__close">&times;</a>
+                    <h2 class="title">title-</h2>
+                    <h3 class="age-rating">rating</h3>
+                    <h3 class="length">length</h3>
+                    <h3 class="prodcom">prod</h3>
+                    <h3 class="genres">genre</h3>
+                    <h3 class="leadroles">lead</h3>
+                    <h2 class="year">year</h2>
+                    <p class="longdescription">desc</p>
+                    <a href="#" class="trailer">Watch the trailer</a>
+                </div>
+            </article>
+        </div>
 
-    <article id="modal" class="inactive">
-        <button id="exitmodal">X</button>
-        <img src="img" alt="photo1" class="photo1">
-        <img src="img" alt="photo2" class="photo2">
-        <h2 class="title">title-</h2>
-        <h3 class="age-rating">rating</h3>
-        <h3 class="length">length</h3>
-        <h3 class="prodcom">prod</h3>
-        <h3 class="genres">genre</h3>
-        <h3 class="leadroles">lead</h3>
-        <h2 class="year">year</h2>
-        <p class="longdescription">desc</p>
 
-        <a href="#" class="trailer">Watch the trailer</a>
-
-    </article>
     <aside>
         <!--I just added this bar in case we want photos in the sidebar, Like in pola's design.
                     Feel free to delete if it is not needed :)-->
