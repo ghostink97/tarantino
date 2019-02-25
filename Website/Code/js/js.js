@@ -8,6 +8,7 @@ const btnleft =document.querySelector(".arrowbtnleft");
 const sortbycat=document.querySelector("#sortby-categories");
 let movies;
 
+
 function loadJSON(link) {
     fetch(link).then(e=>e.json()).then(data=>{
         movies=data.feed.entry
@@ -21,7 +22,7 @@ function displayTarData(data){
 
     clone.querySelector(".poster").src=data.gsx$movieposter.$t;
     clone.querySelector(".year").textContent=data.gsx$releaseyear.$t;
-    clone.querySelector(".imdb").textContent=data.gsx$imdb.$t;
+    clone.querySelector(".imdb").innerHTML=data.gsx$imdb.$t + "&#9733;";
     clone.querySelector(".title").textContent=data.gsx$title.$t;
     clone.querySelector(".age-rating").textContent=data.gsx$agerating.$t;
     clone.querySelector(".year").textContent=data.gsx$releaseyear.$t;
@@ -45,7 +46,9 @@ function displayTarData(data){
         modal.querySelector(".leadroles").textContent=data.gsx$leadroles.$t;
         modal.querySelector(".year").textContent=data.gsx$releaseyear.$t;
         modal.querySelector(".longdescription").textContent=data.gsx$stotyline.$t;
+
         modal.querySelector(".trailer").href=data.gsx$trailerlink.$t;
+
 
         modal.querySelector("#exitmodal").addEventListener("click", ()=>{
     modalInfoHide(data);
@@ -56,7 +59,7 @@ function displayTarData(data){
         }
     }
 
-        
+
     main.appendChild(clone);
 }
 

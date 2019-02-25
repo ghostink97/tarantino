@@ -8,75 +8,89 @@
     <link rel="stylesheet" href="css/css.css" type="text/css">
     <title>Cinema Tarantino</title>
     <link rel="icon" href="film.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
 </head>
 
 <body>
+
+
     <header id="header">
         <h1 class="heading-primary">Cinema Tarantino</h1>
-        <div class="arrow"><a href="#main"><img src="images/down-arrow-med.png" alt="arrowbtndown" class="arrow__btn"></a></div>
-        <!--                    there is a large one in the images folder, feel free to switch it to that one, if it's better<img src="images/down-arrow-med.png" alt="arrowbtndown" class="arrow__btn">-->
+        <h1 class="subheading-primary">shoot the gun, we double dare you</h1>
+        <div class="arrow"><a href="#main"><img src="images/gun.png" alt="arrowbtndown" class="arrow__btn"></a></div>
     </header>
+
+
     <main id="main">
-        <h2 class="heading-secondary">Cinema Tarantino</h2>
-        <div id="sortNav">
-            <h3 id="sortby">Sort by</h3>
-            <img src="images/right-arrow-med.png" alt="arrowbtnright" class="arrowbtnright">
-            <img src="images/left-arrow-med.png" alt="arrowbtnleft" class="arrowbtnleft inactive">
-        </div>
         <nav>
+            <div id="sortNav">
+                <h3 id="sortby">sort by</h3>
+                <img src="images/gun.png" alt="arrowbtnright" class="arrowbtnright">
+                <img src="images/gun.png" alt="arrowbtnleft" class="arrowbtnleft inactive">
+            </div>
+
             <div id="sortby-categories" class="inactive">
                 <ul>
                     <li>
+
                         <a class="link sorttitle" href="#">ABC</a>
                     </li>
                     <li>
                         <a class="link sortyear" href="#">IMDB Score</a>
                     </li>
                     <li>
-                        <a class="link" href="#">Release Year</a>
+                        <a class="link" href="#">release year</a>
                         <!--Release year as the final option because it is the default-->
                     </li>
                 </ul>
             </div>
+
+
         </nav>
+
         <section id="posters">
         </section>
+
+
         <section id="tarantino">
             <h2 class="heading-tertiary">About Quentin Tarantino</h2>
             <img src="images/tarantino.png" alt="image of tarantino" class="tarantinoimg">
-            <p>
-                Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee. Quentin moved with his mother to Torrance, California, when he was four years old.
-
-                In January of 1992, first-time writer-director Tarantino's Wściekłe psy (1992) appeared at the Sundance Film Festival. The film garnered critical acclaim and the director became a legend immediately. Two years later, he followed up Dogs success with Pulp Fiction (1994) which premiered at the Cannes film festival, winning the coveted Palme D'Or Award. At the 1995 Academy Awards, it was nominated for the best picture, best director and best original screenplay. Tarantino and writing partner Roger Avary came away with the award only for best original screenplay. In 1995, Tarantino directed one fourth of the anthology Cztery pokoje (1995) with friends and fellow auteurs Alexandre Rockwell, Robert Rodriguez and Allison Anders. The film opened December 25 in the United States to very weak reviews. Tarantino's next film was Od zmierzchu do świtu (1996), a vampire/crime story which he wrote and co-starred with George Clooney. The film did fairly well theatrically.
-
-                Since then, Tarantino has helmed several critically and financially successful films, including Jackie Brown (1997), Kill Bill (2003), Kill Bill 2 (2004), Bękarty wojny (2009), Django (2012) and Nienawistna ósemka (2015).<br><br>
-                - IMDb Mini Biography By: Kale Whorton
-            </p>
+            <div class="columns">
+                <p>
+                    Quentin Jerome Tarantino was born March 27, 1963 in Knoxville, Tennessee. His early obsession with film translated into creating movies which are characterized by non-linear storylines, satirical subject matter, and an aestheticization of violence, as well as features of neo-noir film and spaghetti Westerns.
+                </p>
+                <p>
+                    His career began in the late 1980s, when he wrote and directed My Best Friend's Birthday. His next film, Reservoir Dogs released in 1992; regarded as a classic and cult hit, it was called the "Greatest Independent Film of All Time" by Empire. Its popularity was boosted by the release of Pulp Fiction in 1994, a neo-noir crime film that became a major critical and commercial success and judged the greatest film of the past 25 years (1983-2008) by Entertainment Weekly.
+                </p>
+                <p>
+                    Quentin Tarantino, an American film director, screenwriter, cinematographer, producer, and actor, whos films have garnered both critical and commercial success. He has received many industry awards, including two Academy Awards for Django Unchained and Pulp Fiction ( best original screenplay). He was named one of the 100 Most Influential People in the World by Time in 2005.
+                </p>
+            </div>
         </section>
     </main>
-    <template id="poster-template">
-       <div class="card">
 
+
+    <template id="poster-template">
+        <div class="card">
             <div class="card__side card__side--front">
                 <img src="img" alt="poster" class="poster">
             </div>
-
-
             <div class="card__side card__side--back card__side--back-1">
-
-<article id="hoverinfo" class="">
-        <h3 class="imdb">imdb</h3>
-        <h2 class="title">title</h2>
-        <h3 class="age-rating">rating</h3>
-        <h3 class="year">year</h3>
-        <h3 class="genres">genres</h3>
-        <p class="shortDescription">shortDescription</p>
-        <button id="readmore">Read More</button>
-    </article>
+                <article id="hoverinfo" class="">
+                    <h3 class="imdb">imdb</h3>
+                    <h2 class="title">title</h2>
+                    <div class="container">
+                        <h3 class="age-rating">rating</h3>
+                        <h3 class="year">year</h3>
+                        <h3 class="genres">genres</h3>
+                    </div>
+                    <p class="shortDescription">shortDescription</p>
+                    <button id="readmore">Read More</button>
+                </article>
             </div>
         </div>
-
     </template>
+
 
     <article id="modal" class="inactive">
         <button id="exitmodal">X</button>
@@ -89,7 +103,9 @@
         <h3 class="leadroles">lead</h3>
         <h2 class="year">year</h2>
         <p class="longdescription">desc</p>
+
         <a href="#" class="trailer">Watch the trailer</a>
+
     </article>
     <aside>
         <!--I just added this bar in case we want photos in the sidebar, Like in pola's design.
@@ -102,4 +118,5 @@
     <script src="js/js.js"></script>
 </body>
 <!--just to add a pull request-->
+
 </html>
