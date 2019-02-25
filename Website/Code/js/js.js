@@ -37,7 +37,8 @@ function displayTarData(data){
 
     function modalInfoShow(data){
         modal.classList.remove("inactive");
-        modal.querySelector(".poster").src=data.gsx$movieposter.$t;
+        modal.querySelector(".photo1").src=data.gsx$photo1.$t;
+        modal.querySelector(".photo2").src=data.gsx$photo2.$t;
         modal.querySelector(".title").textContent=data.gsx$title.$t;
         modal.querySelector(".age-rating").textContent=data.gsx$agerating.$t;
         modal.querySelector(".length").textContent=data.gsx$length.$t;
