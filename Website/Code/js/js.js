@@ -8,6 +8,7 @@ const btnleft =document.querySelector(".arrowbtnleft");
 const sortbycat=document.querySelector("#sortby-categories");
 
 
+
 function loadJSON(link) {
     fetch(link).then(e=>e.json()).then(data=>data.feed.entry.forEach(displayTarData));
 }
@@ -18,7 +19,7 @@ function displayTarData(data){
 
     clone.querySelector(".poster").src=data.gsx$movieposter.$t;
     clone.querySelector(".year").textContent=data.gsx$releaseyear.$t;
-    clone.querySelector(".imdb").textContent=data.gsx$imdb.$t;
+    clone.querySelector(".imdb").innerHTML=data.gsx$imdb.$t + "&#9733;";
     clone.querySelector(".title").textContent=data.gsx$title.$t;
     clone.querySelector(".age-rating").textContent=data.gsx$agerating.$t;
     clone.querySelector(".year").textContent=data.gsx$releaseyear.$t;
@@ -55,7 +56,7 @@ function displayTarData(data){
         }
     }
 
-        
+
     main.appendChild(clone);
 }
 
