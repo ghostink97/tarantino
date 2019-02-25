@@ -10,7 +10,7 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
@@ -23,16 +23,16 @@ body {
     background-color: #2B2A2A;
     color: #b2b2b2;
     font-family: "Courier";
-    font-weight: 100;
-    width: 80%;
-    margin: auto;
 }
 
+#wrapper {
+    width: 80vw;
+    margin: auto;
+}
 
 /*888888888888 HEADING 888888888888*/
 
 #header {
-    width: 100vw;
     height: 100vh;
 }
 
@@ -57,8 +57,7 @@ body {
 }
 
 .subheading-primary {
-    display: inline-block;
-    width: 90vw;
+    display: block;
 
     position: absolute;
     top: 50%;
@@ -126,25 +125,6 @@ body {
 
 /*888888888888 SORT BY SECTION 888888888888*/
 
-.heading-secondary {
-    display: block;
-    font-family: myFirstFont;
-    color: #FAAE00;
-    text-shadow: 0px 3px #BE0602;
-    text-align: left;
-    letter-spacing: .2rem;
-    font-weight: 200;
-    font-size: 2rem;
-    padding-top: 1rem;
-    opacity: .5;
-    transition: all .2s ease-in;
-    margin-bottom: 3rem;
-}
-
-.heading-secondary:hover {
-    opacity: 1;
-}
-
 nav {
     margin-bottom: 4rem;
     width: 80vw;
@@ -153,9 +133,8 @@ nav {
 #sortby {
     display: inline-block;
     margin-top: 5rem;
-
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 2rem;
+    font-family: Courier;
+    font-size: 4rem;
     color: #585555;
     font-weight: 100;
     margin-left: 1rem;
@@ -166,7 +145,7 @@ nav {
 
 .arrowbtnright,
 .arrowbtnleft {
-    width: 5rem;
+    width: 7rem;
     transition: all .2s ease-in;
 }
 
@@ -177,7 +156,6 @@ nav {
 
 
 #sortby-categories {
-    display: block;
     text-align: center;
 }
 
@@ -256,7 +234,6 @@ nav {
 */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 1rem;
 }
 
 .poster {
@@ -337,7 +314,7 @@ nav {
     text-align: center;
     letter-spacing: .2rem;
     font-weight: 200;
-    font-size: 5rem;
+    font-size: 4rem;
 
     margin: 3rem;
 }
@@ -403,3 +380,59 @@ nav {
 .inactive {
     display: none;
 }
+
+
+
+
+
+/*888888888888 MEDIA QUERIES FOR TABLET 888888888888*/
+
+@media (max-width:1300px) {
+    .subheading-primary {
+        top: 60%;
+    }
+}
+
+
+@media (max-width:900px) {
+    #sortby-categories ul li a {
+        font-size: 3rem;
+    }
+
+    #sortby {
+        font-size: 2.5rem;
+    }
+
+    .columns {
+    column-count: 1;
+    }
+}
+
+@media (max-width:700px) {
+    .heading-primary {
+        font-size: 4rem;
+    }
+
+    .subheading-primary {
+        font-size: 1.5rem;
+    }
+
+
+    .columns {
+    column-count: 1;
+    }
+
+    .tarantinoimg {
+        display: block;
+        float: none;
+        margin: auto;
+    }
+
+    #tarantino p {
+        display: block;
+    }
+}
+
+
+
+
