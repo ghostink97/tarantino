@@ -59,7 +59,6 @@ function displayTarData(data){
         }
     }
 
-
     main.appendChild(clone);
 }
 
@@ -100,6 +99,7 @@ document.querySelector(".sorttitle").addEventListener("click",e=>{
 })
 
 document.querySelector(".sortyear").addEventListener("click",e=>{
+    console.log("year");
     main.innerHTML=""
     movies.sort(function (a, b) {
         return a.gsx$releaseyear.$t - b.gsx$releaseyear.$t;
@@ -107,6 +107,14 @@ document.querySelector(".sortyear").addEventListener("click",e=>{
       movies.forEach(displayTarData)
 })
 
+document.querySelector(".sortimdb").addEventListener("click",e=>{
+    console.log("imdb");
+    main.innerHTML=""
+    movies.sort(function (a, b) {
+        return a.gsx$imdb.$t - b.gsx$imdb.$t;
+      });
+      movies.forEach(displayTarData)
+})
 
 
 
