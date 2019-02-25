@@ -6,10 +6,13 @@ const hoverinfo =document.querySelector("#hoverinfo");
 const btnright =document.querySelector(".arrowbtnright");
 const btnleft =document.querySelector(".arrowbtnleft");
 const sortbycat=document.querySelector("#sortby-categories");
-
+let movies;
 
 function loadJSON(link) {
-    fetch(link).then(e=>e.json()).then(data=>data.feed.entry.forEach(displayTarData));
+    fetch(link).then(e=>e.json()).then(data=>{
+        movies=data.feed.entry
+        movies.forEach(displayTarData)
+    });
 }
 
 function displayTarData(data){
@@ -75,6 +78,32 @@ function dontsortbycat(){
     btnleft.classList.add("inactive");
 }
 //
+document.querySelector(".sorttitle").addEventListener("click",e=>{
+    main.innerHTML=""
+    movies.sort(function(a, b) {
+        var nameA = a.gsx$title.$t.toUpperCase(); // ignore upper and lowercase
+        var nameB = b.gsx$title.$t.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+      
+        // names must be equal
+        return 0;
+      })
+      movies.forEach(displayTarData)
+})
+
+document.querySelector(".sortyear").addEventListener("click",e=>{
+    main.innerHTML=""
+    movies.sort(function (a, b) {
+        return a.gsx$releaseyear.$t - b.gsx$releaseyear.$t;
+      });
+      movies.forEach(displayTarData)
+})
+
 
 
 
