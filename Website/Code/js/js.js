@@ -97,22 +97,31 @@ document.querySelector(".sorttitle").addEventListener("click",e=>{
         return 0;
       })
       movies.forEach(displayTarData)
+      document.querySelector(".sortyear").classList.remove("activesort");
+      document.querySelector(".sortimdb").classList.remove("activesort");
+      document.querySelector(".sorttitle").classList.add("activesort");
 })
 
 document.querySelector(".sortyear").addEventListener("click",e=>{
     console.log("year");
+    document.querySelector(".sortimdb").classList.remove("activesort");
+    document.querySelector(".sorttitle").classList.remove("activesort");
+    document.querySelector(".sortyear").classList.add("activesort");
     main.innerHTML=""
     movies.sort(function (a, b) {
-        return a.gsx$releaseyear.$t - b.gsx$releaseyear.$t;
+        return b.gsx$releaseyear.$t - a.gsx$releaseyear.$t;
       });
       movies.forEach(displayTarData)
 })
 
 document.querySelector(".sortimdb").addEventListener("click",e=>{
     console.log("imdb");
+    document.querySelector(".sortyear").classList.remove("activesort");
+    document.querySelector(".sorttitle").classList.remove("activesort");
+    document.querySelector(".sortimdb").classList.add("activesort");
     main.innerHTML=""
     movies.sort(function (a, b) {
-        return a.gsx$imdb.$t - b.gsx$imdb.$t;
+        return b.gsx$imdb.$t - a.gsx$imdb.$t;
       });
       movies.forEach(displayTarData)
 })
