@@ -178,7 +178,7 @@ nav {
     font-family: 'Didact Gothic', sans-serif;
     font-size: 7rem;
     font-weight: 100;
-    color: #848181;
+    color: #b5b5b5;
     margin-left: 3rem;
 
     transition: scale .3s ease-in;
@@ -188,6 +188,10 @@ nav {
     border-bottom: 1px solid #FAAE00;
 }
 
+
+#sortby-categories .activesort{
+    border-bottom: 1px solid #FAAE00;
+}
 
 
 
@@ -201,6 +205,7 @@ nav {
     column-count: 2;
     column-gap: 1.5rem;
     column-rule: 1px solid rgba(178, 178, 178, 0.2);
+    max-width: 50rem;
 }
 
 .heading-tertiary {
@@ -215,6 +220,7 @@ nav {
     padding-top: 5rem;
     margin-top: 5rem;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .tarantinoimg {
@@ -341,11 +347,11 @@ nav {
 .genres {
     display: inline-block;
     font-family: Courier;
-    color: #848181;
+    color: #b5b5b5;
     text-align: center;
     letter-spacing: .2rem;
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 1.5rem;
 
     margin-left: 2rem;
 
@@ -551,7 +557,7 @@ img.photo2 {
 
 
 
-/*888888888888 MEDIA QUERIES FOR TABLET 888888888888*/
+/*888888888888 MEDIA QUERIES 888888888888*/
 
 @media (max-width:1300px) {
     .subheading-primary {
@@ -599,6 +605,30 @@ img.photo2 {
     }
 }
 
-#sortby-categories .activesort{
-    text-decoration: underline #FAAE00;
+
+/*888888888888 MEDIA QUERIES for modal 888888888888*/
+
+@media (max-width: 920px) {
+
+    .popup__content{
+       width: 80%;
+    }
+    .modal-content__left {
+        display: none;
+    }
 }
+
+
+@media (max-width: 440px) {
+
+    html {
+        font-size: 8px;
+    }
+}
+
+
+
+
+
+
+
